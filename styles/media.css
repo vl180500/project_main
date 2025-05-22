@@ -1,0 +1,13 @@
+
+@media (min-width: 768px) {
+    .hero-section {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+   
+  }
