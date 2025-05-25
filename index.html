@@ -10,9 +10,9 @@
   </head>
 
   <body>
-    <div class="top-bar">
-      <a href="#"> Free worldwide shipping for orders over $55. Shop now</a>
-      <button class="close-btn">&times;</button>
+    <div class="top-bar" id="topBar">
+      <a href="#product"> Free worldwide shipping for orders over $55. Shop now</a>
+      <button class="close-btn" id="closeTopBar">&times;</button>
     </div>
 
     <header class="main-header">
@@ -20,15 +20,36 @@
         <a href="#product">Products</a>
         <a href="#story">Story</a>
         <a href="#blog">Blog</a>
-        <a href="#burger-chekbox">Collections &#9662;</a>
+       <div class="dropdown">
+      <span class="dropdown-btn">Collections &#9662;</span>
+      <div class="dropdown-content">
+        <a href="#best">Best Sellers</a>
+        <a href="#oily">For oily skin</a>
+        <a href="#age">For aging skin</a>
+        <a href="#product">Moisturizing cream</a>
+      </div>
+    </div>
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
         <button class="cart-btn">🛒 Cart</button>
-        <button class="subscribe-btn">Subscribe</button>
+        <button class="subscribe-btn" id="openBtn">Subscribe</button>
       </div>
     </header>
-
+<div id="popupForm" class="popup">
+    <div class="popup-content">
+     <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="email" id="username" name="username" placeholder="Email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="8">
+        <button type="submit">Login</button>
+          <span class="close-btn" id="closeBtn">&times;</span> 
+      </form>
+     
+    </div>
+  </div>
     <main>
       <article class="hero-section" id="home">
         <div class="hero-text">
@@ -134,7 +155,7 @@
         </div>
       </section>
 
-      <section class="best">
+      <section class="best" id="best">
         <div class="best-card">
             <h2 class="best-h">Best selling creams</h2>
             <p class="best-p">
@@ -187,7 +208,7 @@
         </div>
       </section>
       
-      <SECtion class="oily-cont" id="cut">
+      <SECtion class="oily-cont" id="oily">
            <img src="images/oily.jpg" alt="oily" class="oily-image">
           <div class="oily-text">
           <span class="badge">Smooth skin collection</span>
@@ -197,12 +218,12 @@
           and moisturising with <br>the right products.These should not contain pore-clogging <br>ingredients.</p>
          <div class="oily-button">
           <button class="oily-but">Shop now</button>
-          <a href="#" class="oily-a">Explore more ></a>
+          <a  class="oily-a">Explore more ></a>
          </div>
           </div>
       </SECtion>
 
-      <SECtion class="age-cont">
+      <SECtion class="age-cont" id="age">
           <div class="age-text">
           <span class="badge">Anti-aging collection</span>
          <h2 class="age-h2">Skincare for aging skin</h2>
@@ -211,7 +232,7 @@
           healthy hydration, skin <br>cell turnover and collagen production.</p>
          <div class="age-button">
           <button class="age-but">Shop now</button>
-          <a href="#" class="age-a">Explore more ></a>
+          <a  class="age-a">Explore more ></a>
          </div>
          </div>
         <img src="images/age.jpg" alt="age" class="age-image">
@@ -221,7 +242,7 @@
           <div class="cust-top">
             <span class="badge">Testimonials</span>
             <h2 class="cust-h2">What our customers say</h2>
-            <p class="cust-p">Real opinion our customers</p>
+            <p class="cust-p">Real opinions our customers</p>
           </div>
           <div class="cust-main">
             <div class="cust-review">
@@ -232,8 +253,10 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             </div>
-            <p class="cust-p2">"Nulla facilisi. Sed sit amet commodo quam, ac viverra turpis. 
-              Maecenas vitae pulvinar lacus. Suspendisse cursus turpis vel ante laoreet vehicula."</p>
+            <p class="cust-p2">Once I found Curology, my skin instantly 
+              began to change in regards to my acne and my skin texture. 
+              These past few months have helped me with my confidence and 
+              my ability to become comfortable in my own skin.</p>
               <div class="author">
             <img src="images/c1.jpg" alt="" class="cust-image">
             <div>
@@ -250,9 +273,8 @@
             <span class="fas fa-star"></span>
             <span class="fas fa-star-half-alt"></span>
             </div>
-            <p class="cust-p2">"Sed mattis scelerisque metus. Mauris ultricies, dui id finibus
-               pretium, neque sapien vestibulum lectus, id tincidunt risus nulla at magna. Nulla 
-               rhoncus dolor at est vehicula, vel gravida risus vulputate libero."</p>
+            <p class="cust-p2">I've struggled with my skin for 10 years, 
+              and I have literally tried everything with no success.</p>
                <div class="author">
             <img src="images/c2.jpg" alt="" class="cust-image">
             <div>
@@ -269,8 +291,7 @@
             <span class="fas fa-star"></span>
             <span class="fas fa-star"></span>
             </div>
-            <p class="cust-p2">"Duis sit amet mi et mauris sollicitudin semper. Donec quam justo,
-               accumsan condimentum sollicitudin sed, posuere ac lacus etiam saggitis sed nisi."</p>
+            <p class="cust-p2">The inflammation went down drastically and I was able to touch my face again.</p>
             <div class="author">
             <img src="images/c3.jpg" alt="" class="cust-image">
             <div>
@@ -287,9 +308,9 @@
             <span class="fas fa-star"></span>
             <span class="fas fa-star"></span>
             </div>
-            <p class="cust-p2">"Maecenas tellus mauris, sagittis a dui sed, porta convallis 
-              est. Morbi sapien massa, semper non tincidunt sed, lobortis vel nisl. 
-              Curabitur fermentum eget justo nec efficitur."</p>
+            <p class="cust-p2"> I love how they don’t irritate my sensitive skin. 
+              I feel more confident, I experience little to no breakouts, my skin
+               isn’t as textured as before, and I love how much brighter my skin looks!</p>
             <div class="author">
             <img src="images/c4.jpg" alt="" class="cust-image">
             <div>
@@ -306,9 +327,9 @@
             <span class="fas fa-star"></span>
             <span class="fas fa-star"></span>
             </div>
-            <p class="cust-p2">"Phasellus laoreet posuere est quis euismod. In facilisis sem non tincidunt 
-              feugiat. Mauris vitae elit eget quam sollicitudin gravida. 
-              Praesent imperdiet viverra justo nec ullamcorper. In dictum felis at mauris fringilla pulvinar."</p>
+            <p class="cust-p2">The woman I spoke to was incredibly kind and 
+              quick to respond. She got my problem sorted immediately. Perfect 
+              customer service, I could not have asked for anything bette</p>
             <div class="author">
             <img src="images/c5.jpg" alt="" class="cust-image">
             <div>
@@ -325,8 +346,11 @@
             <span class="fas fa-star"></span>
             <span class="fas fa-star"></span>  
            </div>
-            <p class="cust-p2">"Etiam sagittis nec tortor in scelerisque. Sed et bibendum nisi, 
-              sit amet varius libero. Maecenas posuere convallis tellus, at hendrerit sem."</p>
+            <p class="cust-p2">This is one of the easiest things I have ever 
+              done for our health. All done online with photos, etc. and the 
+              customer service is amazing! Do keep in mind that skin care takes 
+              time and patience, but this is totally worth it to avoid going to 
+              traditional dermatologist appointments.</p>
             <div class="author">
             <img src="images/c6.jpg" alt="" class="cust-image">
             <div>
@@ -372,8 +396,8 @@
           <div class="blog-head">
             <span class="badge">Latest posts</span>
             <h2 class="blog-h2">From our blog</h2>
-            <div class="blog-p1">
-            <p class="blog-ph">Lorem ipsum dolor sit amet.</p>
+            <div class="blog-p1">  
+            <p class="blog-ph">Want to know more? We’ve got you</p>
             <button class="blog-btn">View all posts</button>
             </div>
           </div>
@@ -381,11 +405,12 @@
             <div class="blog-card">
               <div class="blog-im">
               <img src="images/blog1.jpg" alt="" class="blog-image">
-              <span class="badge2">Anti-aging</span>
+              <span class="badge2">Acne treatment</span>
               </div>
               <h3 class="blog-h3">Dry acne prone skincare <br>routine</h3>
-              <p class="blog-p">Lorem ipsum dolor, sit amet consectetur <br>adipisicing elit. Quia, odit?</p>
-              <a href="#" class="blog-a">Read more ></a>
+              <p class="blog-p">Discover your perfect acne routine<br> with our lineup of 
+                dermatologist-designed skincare.</p>
+              <a  class="blog-a">Read more ></a>
             </div>
               <div class="blog-card">
                 <div class="blog-im">
@@ -393,8 +418,8 @@
               <span class="badge2">Skin types</span> 
                </div>   
               <h3 class="blog-h3"> 5 ingredients to calm down <br>stressed out skin </h3>
-              <p class="blog-p">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Reprehenderit, hic.</p>
-              <a href="#" class="blog-a">Read more ></a>
+              <p class="blog-p">Get and keep a healthy glow with<br> hydrating skincare that keeps moisture in.</p>
+              <a  class="blog-a">Read more ></a>
             </div>
             <div class="blog-card">
               <div class="blog-im">
@@ -402,8 +427,8 @@
               <span class="badge2">Organic skincare</span>
               </div>
               <h3 class="blog-h3">How to use products for <br>sensitive skin</h3>
-              <p class="blog-p">Lorem, ipsum dolor sit amet consectetur <br>adipisicing elit. Ab, eius!</p>
-              <a href="#" class="blog-a">Read more ></a>
+              <p class="blog-p">Help reduce redness with powerful ingredients<br> that calm inflammation.</p>
+              <a  class="blog-a">Read more ></a>
             </div>
           </div>
            </section>
@@ -434,31 +459,31 @@
                   <a href="#Contact">Contact</a>
                   <a href="#blog">Blog</a>
                   <a href="#faq">FAQs</a>
-                  <a href="">Legal</a>
+                  <a>Legal</a>
                 </nav>
                  <nav class="last-nav">
                   <h4 class="last-h4">CMS Pages</h4>
                   <a href="#blog">Blog Post</a>
                   <a href="#customers">Blog Categories</a>
                   <a href="#product">Product Page</a>
-                  <a href="#cut">Product Categories</a>
+                  <a href="#best">Product Categories</a>
                 </nav>
                     <nav class="last-nav">
                    <h4 class="last-h4">Account pages</h4>
                   <a href="#home">Log In</a>
                   <a href="#home">Sign Up</a>
-                  <a href="">Forgot Password</a>
-                  <a href="">Reset Password</a>
-                  <a href="">Email Confirmation</a>
+                  <a>Forgot Password</a>
+                  <a>Reset Password</a>
+                  <a>Email Confirmation</a>
                 </nav>
                    <nav class="last-nav">
                   <h4 class="last-h4">Utility Pages</h4>
-                  <a href="">Guide</a>
+                  <a>Guide</a>
                   <a href="#story">Our Story</a>
                   <a href="#customers">Community</a>
-                  <a href="">Support</a>
-                  <a href="">Careers</a>
-                  <a href="">Reviews</a>
+                  <a>Support</a>
+                  <a>Careers</a>
+                  <a>Reviews</a>
                 </nav>
                 </div>
              </section>
@@ -466,24 +491,24 @@
 
 <footer class="footer" id="contact">
     <div class="foot">
-      <a href="#">© Beautico by Minimal Square</a>
-      <a href="#">Powered by Webflow</a>
+      <a>© Beautico by Minimal Square</a>
+      <a>Powered by Webflow</a>
     </div>
   <div class="social-icons">
-  <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+  <a href="https://www.facebook.com/curology" target="_blank" aria-label="Facebook">
     <i class="fab fa-facebook-f"></i>
   </a>
-  <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+  <a href="https://www.instagram.com/curology" target="_blank" aria-label="Instagram">
     <i class="fab fa-instagram"></i>
   </a>
-  <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp">
+  <a href="https://wa.me/curology" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://x.com/yourprofile" target="_blank" aria-label="X (Twitter)">
+  <a href="https://x.com/curology" target="_blank" aria-label="X (Twitter)">
     <i class="fab fa-x-twitter"></i>
   </a>
 </div>
 </footer>
-
+<script src="script.js"></script>
   </body>
 </html>
