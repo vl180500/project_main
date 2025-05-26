@@ -38,9 +38,9 @@
   background-color: white;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   align-items: center;
   padding: 1rem 2rem;
-  flex-wrap: wrap;
   position: sticky;
   top:0;
   z-index: 1000;
@@ -48,11 +48,11 @@
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 2rem;
   font-weight: 400;
   color: black;
-  flex-wrap: wrap;
-  justify-content: space-around;
   margin-right: 380px;
 }
 .nav-links a {
@@ -213,6 +213,7 @@
   margin-left: 70px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .hero-image img {
   width: 720px;
@@ -289,8 +290,7 @@
  justify-content: space-around;
  align-items: center;
   flex-wrap: wrap;
-  padding: 30px;
-  height: 200px;
+  padding: 80px;
   background-color: #f4f3fd;
   color: #3d2d6f;
 }
@@ -892,6 +892,9 @@ margin-top: 20px;
 
 /*blog*/
 
+.blog {
+  flex-wrap: wrap;
+}
 .blog-head {
   max-width: 1350px;
   margin: 0 auto;

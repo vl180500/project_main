@@ -1,1 +1,63 @@
-/*# sourceMappingURL=media.css.map */
+@media screen and (max-width: 768px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .dropdown-content {
+    min-width: 70px;
+  }
+  .header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .logos {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blog-p1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .blog-head {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .blog {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .blog-btn {
+    position: relative;
+  }
+  .pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .feature-bar {
+    align-items: center;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=media.css.map */
